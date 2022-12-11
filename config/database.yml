@@ -85,8 +85,7 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
 production:
   <<: *default
-  database: lms_kim_production
-  username: lms_kim
-  password: <%= ENV["LMS_KIM_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
